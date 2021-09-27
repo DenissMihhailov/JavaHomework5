@@ -18,7 +18,8 @@ public class JavaHomework5 {
      */
     public static void main(String[] args) {
         Random random=new Random();
-        int summa=0, value=0;
+        double summa=0; 
+        int value=0;
         int[] nums;
         nums= new int[20]; 
         for (int i = 0; i < nums.length; i++) {  
@@ -30,11 +31,32 @@ public class JavaHomework5 {
             System.out.printf("%4d",nums[i]);
             
         }
+        int maxInt=0;
         for (int i = 0; i <nums.length; i++) {
+            if(maxInt<nums[i]){
+                maxInt=nums[i];
+            }
+        }
+        int minInt=value;
+        for (int i = 0; i <nums.length; i++) {
+            if(minInt>nums[i]){
+                minInt=nums[i];
+            }
+            
+        }
+        for (int i = 0; i <nums.length; i++) {
+            if(maxInt==nums[i]){
+                nums[i]=0;
+            }if(minInt==nums[i]){           
+                nums[i]=0;
+
+        }
             summa+=nums[i];
         }
+        
         summa=summa/value;
         System.out.printf(" | Средняя арифмитическое строки - "+summa);
+        System.out.println("");
     }
     
 }
